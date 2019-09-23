@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import CamPreviewComponent from './CamPreviewComponent';
+import FooterComponent from './FooterComponent';
 import Grid from '@material-ui/core/Grid';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
@@ -18,9 +19,8 @@ const styles = theme => ({
     container: {
         paddingTop: theme.spacing(4),
         paddingBottom: theme.spacing(4),
-    },
-    fab: {
-        margin: theme.spacing(1),
+        maxWidth: '1140px',
+        margin: 'auto',
     },
 });
 
@@ -49,9 +49,7 @@ class ContainerComponent extends Component {
                                     <CamPreviewComponent camId={3} />
                                 </Grid>
                             </Grid>
-                            <Fab color="primary" aria-label="add" className={classes.fab}>
-                                <AddIcon />
-                            </Fab>
+                            <FooterComponent></FooterComponent>
                         </Container>
                     </div>
             </main>
