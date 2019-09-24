@@ -7,16 +7,10 @@ class HomeComponent extends Component {
 
   render() {
     return (
-        <Router>
-          <div className="App">
-            <MainLyout>
-              <Route 
-                exact path='/cam/:id' 
-                render={props => <CamViewComponent {...this.props} />}
-              />
-            </MainLyout>
-          </div>
-        </Router>
+      <div className="App">
+        <MainLyout>
+        </MainLyout>
+      </div>
       );
   }
 }

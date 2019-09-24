@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import CamPreviewComponent from './CamPreviewComponent';
+import ContainerCamsPreviewComponent from './ContainerCamsPreviewComponent';
+import CamViewComponent from './CamViewComponent';
 import FooterComponent from './FooterComponent';
 import Grid from '@material-ui/core/Grid';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const styles = theme => ({
     root: {
@@ -31,23 +34,15 @@ class ContainerComponent extends Component {
                 <div className={classes.root}>
                     <div className={classes.appBarSpacer} />
                         <Container maxWidth="lg" className={classes.container}>
-                            <Grid
-                                container
-                                direction="row"
-                                justify="center"
-                                alignItems="center"
-                            >
-                                <Grid item xs={12} lg={4}>
-                                    <CamPreviewComponent camId={1} />
-                                </Grid>
-                                <Grid item xs={12} lg={4}>
-                                    <CamPreviewComponent camId={2} />
-                                </Grid>
-                                <Grid item xs={12} lg={4}>
-                                    <CamPreviewComponent camId={3} />
-                                </Grid>
-                            </Grid>
-                            <FooterComponent></FooterComponent>
+                            <Route 
+                                exact path='/' 
+                                render={props => <ContainerCamsPreviewComponent {...this.props} />}
+                            />
+                            <Route 
+                                path='/cam/:id' 
+                                render={props => <CamViewComponent {...this.props} />}
+                            />
+                        <FooterComponent></FooterComponent>
                         </Container>
                     </div>
             </main>

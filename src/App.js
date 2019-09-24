@@ -10,6 +10,10 @@ function App() {
         exact path='/' 
         render={props => <HomeComponent {...props} />}
       />
+       <Route 
+        path='/cam' 
+        render={props => <HomeComponent {...props} />}
+      />
     </Router>
   );
 }
