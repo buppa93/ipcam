@@ -48,7 +48,10 @@ class CamPreviewComponent extends React.Component {
           </CardContent>
         </CardActionArea>
         <CardActions className={this.props.classes.cardActions}>
-          <Button color="primary" aria-label="play" className={this.props.classes.fab} onClick={onClickHandler}>
+          <Button color="primary" aria-label="play" className={this.props.classes.fab} onClick={onClickEditHandler}>
+            <Icon>edit</Icon>
+          </Button>
+          <Button color="primary" aria-label="play" className={this.props.classes.fab} onClick={onClickPlayHandler}>
             <Icon>play_arrow</Icon>
           </Button>
         </CardActions>
@@ -59,8 +62,12 @@ class CamPreviewComponent extends React.Component {
 
 export default withStyles(classes)(CamPreviewComponent)
 
-function onClickHandler(e) {
-  console.log(e.type);
+function onClickPlayHandler(e) {
+  console.log("onClickPlayHandler: " + e.type);
   //this.props.history.push('camPlayer/' + this.camId)
 }
 
+function onClickEditHandler(e) {
+  console.log("onClickEditHandler: " + e.type);
+  //this.props.history.push('camPlayer/' + this.camId)
+}
