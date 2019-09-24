@@ -1,12 +1,16 @@
 import React from 'react';
 import './App.css';
-import MainLyout from './layout/mainLayout';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import HomeComponent from './components/HomeComponent';
 
 function App() {
   return (
-    <div className="App">
-      <MainLyout></MainLyout>
-    </div>
+    <Router>
+      <Route 
+        exact path='/' 
+        render={props => <HomeComponent {...props} />}
+      />
+    </Router>
   );
 }
 

@@ -4,8 +4,6 @@ import Container from '@material-ui/core/Container';
 import CamPreviewComponent from './CamPreviewComponent';
 import FooterComponent from './FooterComponent';
 import Grid from '@material-ui/core/Grid';
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
 
 const styles = theme => ({
     root: {
