@@ -6,12 +6,12 @@ import HomeComponent from './components/HomeComponent';
 function App() {
   return (
     <Router>
-      <Route 
-        exact path='/' 
+      <Route
+        exact path='/'
         render={props => <HomeComponent {...props} />}
       />
-       <Route 
-        path='/cam' 
+      <Route
+        path='/cam'
         render={props => <HomeComponent {...props} />}
       />
     </Router>

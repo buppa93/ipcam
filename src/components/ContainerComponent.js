@@ -29,22 +29,22 @@ class ContainerComponent extends Component {
 
     render() {
         const { classes } = this.props;
-        return(
+        return (
             <main className={classes.content}>
                 <div className={classes.root}>
                     <div className={classes.appBarSpacer} />
-                        <Container maxWidth="lg" className={classes.container}>
-                            <Route 
-                                exact path='/' 
-                                render={props => <ContainerCamsPreviewComponent {...this.props} />}
-                            />
-                            <Route 
-                                path='/cam/:id' 
-                                render={props => <CamViewComponent {...this.props} />}
-                            />
+                    <Container maxWidth="lg" className={classes.container}>
+                        <Route
+                            exact path='/'
+                            render={props => <ContainerCamsPreviewComponent {...this.props} />}
+                        />
+                        <Route
+                            path='/cam/:id'
+                            render={props => <CamViewComponent {...this.props} />}
+                        />
                         <FooterComponent></FooterComponent>
-                        </Container>
-                    </div>
+                    </Container>
+                </div>
             </main>
         );
     }

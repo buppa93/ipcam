@@ -7,7 +7,7 @@ class MainLayout extends Component {
     render() {
         return (
             <div className={'root'}>
-                <AppBarComponent {...this.props}></AppBarComponent>
+                <AppBarComponent {...this.props} ></AppBarComponent>
                 <ContainerComponent></ContainerComponent>
             </div>
         );

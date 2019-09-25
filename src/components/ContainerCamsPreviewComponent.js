@@ -27,7 +27,7 @@ class ContainerCamsPreviewComponent extends Component {
 
     render() {
         const { classes } = this.props;
-        return(
+        return (
             <Grid
                 container
                 direction="row"
