@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import CamPreviewComponent from './CamPreviewComponent';
 import ContainerCamsPreviewComponent from './ContainerCamsPreviewComponent';
 import CamViewComponent from './CamViewComponent';
 import FooterComponent from './FooterComponent';
-import Grid from '@material-ui/core/Grid';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const styles = theme => ({

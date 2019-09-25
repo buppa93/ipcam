@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
 import CamPreviewComponent from './CamPreviewComponent';
-import FooterComponent from './FooterComponent';
 import Grid from '@material-ui/core/Grid';
-import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const styles = theme => ({
     root: {
@@ -26,7 +23,7 @@ const styles = theme => ({
 class ContainerCamsPreviewComponent extends Component {
 
     render() {
-        const { classes } = this.props;
+        // const { classes } = this.props;
         return (
             <Grid
                 container
