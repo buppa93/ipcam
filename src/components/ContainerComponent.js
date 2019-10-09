@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import ContainerCamsPreviewComponent from './ContainerCamsPreviewComponent';
 import CamViewComponent from './CamViewComponent';
+import CamSettingsComponent from './CamSettingsComponent';
 import FooterComponent from './FooterComponent';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -39,6 +40,10 @@ class ContainerComponent extends Component {
                         <Route
                             path='/cam/:id'
                             render={props => <CamViewComponent {...this.props} />}
+                        />
+                        <Route
+                            path='/setting/:id'
+                            render={props => <CamSettingsComponent {...this.props} />}
                         />
                         <FooterComponent></FooterComponent>
                     </Container>
